@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/navbar.css" />
     <link rel="stylesheet" href="/CSS/footer.css" />
-    <script src="navbar.js" defer></script>
+    <link rel="stylesheet" href="/CSS/blog.css">
+    <script src="/JS/navbar.js" defer></script>
+    <script src="/JS/blog.js" defer></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -21,82 +23,178 @@
           <a href="/HTML/home.html">Home</a>
           <a href="/HTML/aboutus.html">About Us</a>
           <a href="/HTML/services.html">Services</a>
-          <a href="/HTML/project.html">Project</a>
+          <a href="/HTML/portofolio.html">Portofolio</a>
           <a href="/HTML/blog.html">Blog</a>
           <a href="/HTML/contact.html">Contact</a>
         </nav>
       </div>
     </header>
 
+<!-- SECTION 1: Search + Filters -->
+<section class="blog-search-section">
+  <div class="container">
+    <h1 class="blog-title">Blogs</h1>
+    <p class="blog-subtitle">Sharing mascitra.com | Konsultan IT</p>
 
+    <div class="search-bar">
+      <input type="text" placeholder="Search Article Here">
+      <button><i class="fas fa-search"></i></button>
+    </div>
 
-        <!-- Section: Layanan -->
-        <section class="layanan-section">
-          <div class="layanan-header">
-            <h2>Layanan Kami</h2>
-            <div class="divider">
-          <div class="line-with-dot"></div>
+    <div class="filter-menu">
+      <span class="filter-item active">All Categories</span>
+      <span class="filter-item">Smartphone</span>
+      <span class="filter-item">Gadgets</span>
+      <span class="filter-item">Technology</span>
+      <span class="filter-item">Android</span>
+      <span class="filter-item">Tips & Trik</span>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: Highlighted Content -->
+<section class="blog-highlight-section">
+  <div class="container">
+    <div class="highlight-content">
+      <img src="/assets/kuliahtamu.png" alt="Kuliah Tamu">
+      <div class="highlight-text">
+        <h2>Kuliah Tamu Jurusan Teknik Elektro Universitas Jember</h2>
+        <p><strong>Jember, 13 Oktober 2023</strong> - Universitas Jember dengan bangga mengundang perusahaan konsultan IT Mascitra.com sebagai pembicara dalam kegiatan kuliah tamu...</p>
+        <div class="highlight-meta">
+          <span>Kategori: Technology</span>
+          <span>13 Okt 2023</span>
         </div>
-            <p>Layanan ini akan membantu usaha Anda semakin mudah dan maju</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: Archive and Tag Sidebar -->
+<!-- Blog Section Layout -->
+<section class="blog-layout">
+  <div class="container">
+    <div class="layout-wrapper">
+
+      <!-- Kiri: Artikel -->
+      <div class="articles-area">
+        <!-- Artikel diulang -->
+        <div class="blog-card">
+          <img src="/assets/kuliahtamu.png" alt="Thumbnail">
+          <div class="blog-info">
+            <h3>Kuliah Tamu Jurusan Teknik Elektro Universitas Jember</h3>
+            <p>Jember, 13 Oktober 2023 - Universitas Jember dengan bangga mengundang perusahaan konsultan IT Mascitra.com sebagai pembicara...</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+        <!-- Tambah lebih banyak blog-card di sini -->
+        <div class="blog-card">
+          <img src="/assets/kuliahtamu.png" alt="Thumbnail">
+          <div class="blog-info">
+            <h3>Kuliah Tamu Jurusan Teknik Elektro Universitas Jember</h3>
+            <p>Jember, 13 Oktober 2023 - Universitas Jember dengan bangga mengundang perusahaan konsultan IT Mascitra.com sebagai pembicara...</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="/assets/kuliahtamu.png" alt="Thumbnail">
+          <div class="blog-info">
+            <h3>Kuliah Tamu Jurusan Teknik Elektro Universitas Jember</h3>
+            <p>Jember, 13 Oktober 2023 - Universitas Jember dengan bangga mengundang perusahaan konsultan IT Mascitra.com sebagai pembicara...</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="/assets/kuliahtamu.png" alt="Thumbnail">
+          <div class="blog-info">
+            <h3>Kuliah Tamu Jurusan Teknik Elektro Universitas Jember</h3>
+            <p>Jember, 13 Oktober 2023 - Universitas Jember dengan bangga mengundang perusahaan konsultan IT Mascitra.com sebagai pembicara...</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-card">
+          <img src="/assets/kuliahtamu.png" alt="Thumbnail">
+          <div class="blog-info">
+            <h3>Kuliah Tamu Jurusan Teknik Elektro Universitas Jember</h3>
+            <p>Jember, 13 Oktober 2023 - Universitas Jember dengan bangga mengundang perusahaan konsultan IT Mascitra.com sebagai pembicara...</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img src="/assets/kuliahtamu.png" alt="Thumbnail">
+          <div class="blog-info">
+            <h3>Kuliah Tamu Jurusan Teknik Elektro Universitas Jember</h3>
+            <p>Jember, 13 Oktober 2023 - Universitas Jember dengan bangga mengundang perusahaan konsultan IT Mascitra.com sebagai pembicara...</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kanan: Sidebar -->
+      <aside class="sidebar">
+
+        <!-- Archive -->
+        <div class="archive-widget">
+          <div class="archive-header">
+            <i class="icon">&#128190;</i>
+            <h3>Archieve</h3>
           </div>
 
-          <div class="layanan-container">
-            <!-- Kiri -->
-            <div class="layanan-column">
-              <div class="layanan-item">
-                <img src="assets/21.png" alt="Software">
-                <div>
-                  <h4>Software & Program</h4>
-                  <p>Software yang sesuai dengan Business Process Anda</p>
-                </div>
-              </div>
-              <div class="layanan-item">
-                <img src="assets/28.png" alt="Web Design">
-                <div>
-                  <h4>Web Design</h4>
-                  <p>Bangun identitas bisnis dan usaha Anda</p>
-                </div>
-              </div>
-              <div class="layanan-item">
-                <img src="assets/23.png" alt="SEO Service">
-                <div>
-                  <h4>SEO Service</h4>
-                  <p>Memberikan Anda peluang lebih besar dibanding kompetitor</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tengah (Gambar) -->
-            <div class="layanan-image">
-              <img src="assets/16.png" alt="Layanan Center">
-            </div>
-
-            <!-- Kanan -->
-            <div class="layanan-column">
-              <div class="layanan-item">
-                <img src="assets/24.png" alt="IT Audit">
-                <div>
-                  <h4>IT Audit</h4>
-                  <p>Evaluasi sistem, kinerja, dan infrastruktur</p>
-                </div>
-              </div>
-              <div class="layanan-item">
-                <img src="assets/25.png" alt="Hardware">
-                <div>
-                  <h4>Hardware & Network</h4>
-                  <p>Hardware dan Infrastruktur Jaringan yang baik</p>
-                </div>
-              </div>
-              <div class="layanan-item">
-                <img src="assets/26.png" alt="Consulting">
-                <div>
-                  <h4>Consulting</h4>
-                  <p>Konsultasi kan kebutuhan IT Anda pada kami</p>
-                </div>
-              </div>
-            </div>
+          <div class="year-group active">
+            <button class="year-toggle">Tahun 2015 <span class="arrow">&#9662;</span></button>
+            <ul class="month-list">
+              <li>Januari <span class="count">2</span></li>
+              <li>Februari <span class="count">1</span></li>
+              <li>Maret <span class="count">3</span></li>
+              <li>April <span class="count">4</span></li>
+              <li>Mei <span class="count">3</span></li>
+              <li>Juni <span class="count">6</span></li>
+              <li>Juli <span class="count">0</span></li>
+              <li>Agustus <span class="count">2</span></li>
+              <li>September <span class="count">1</span></li>
+              <li>Oktober <span class="count">5</span></li>
+              <li>November <span class="count">0</span></li>
+              <li>Desember <span class="count">3</span></li>
+            </ul>
           </div>
-        </section>
+
+          <div class="year-group">
+            <button class="year-toggle">Tahun 2016 <span class="arrow">&#9656;</span></button>
+            <ul class="month-list"></ul>
+          </div>
+          <div class="year-group">
+            <button class="year-toggle">Tahun 2017 <span class="arrow">&#9656;</span></button>
+            <ul class="month-list"></ul>
+          </div>
+          <div class="year-group">
+            <button class="year-toggle">Tahun 2018 <span class="arrow">&#9656;</span></button>
+            <ul class="month-list"></ul>
+          </div>
+        </div>
+
+        <!-- Tags -->
+        <div class="tags-widget">
+          <h3>Tags</h3>
+          <div class="tags-wrapper">
+            <p class="tag active">Technology</p>
+            <p class="tag">Web</p>
+            <p class="tag">Design</p>
+            <p class="tag">AI</p>
+            <p class="tag">Security</p>
+            <p class="tag">Software</p>
+            <p class="tag">Mobile</p>
+            <p class="tag">Cloud</p>
+            <p class="tag">Network</p>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</section>
 
 
 

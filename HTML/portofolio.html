@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/navbar.css" />
     <link rel="stylesheet" href="/CSS/footer.css" />
-    <script src="navbar.js" defer></script>
+    <link rel="stylesheet" href="/CSS/portofolio.css">
+    <script src="/JS/navbar.js" defer></script>
 
 </head>
 <body>
@@ -22,12 +23,122 @@
           <a href="/HTML/home.html">Home</a>
           <a href="/HTML/aboutus.html">About Us</a>
           <a href="/HTML/services.html">Services</a>
-          <a href="/HTML/project.html">Project</a>
+          <a href="/HTML/portofolio.html">Portofolio</a>
           <a href="/HTML/blog.html">Blog</a>
           <a href="/HTML/contact.html">Contact</a>
         </nav>
       </div>
     </header>
+
+<!-- Section 1: Judul Portofolio -->
+<section class="portofolio-section">
+  <div class="portofolio-container">
+    <div class="portofolio-header">
+      <h2 class="portofolio-judul">Portofolio</h2>
+      <p class="portofolio-subjudul">Kami memiliki portofolio pekerjaan kami. Beberapa program yang sudah kita kerjakan diantaranya</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Menu Portofolio -->
+<section class="portfolio-menu-section">
+  <div class="portfolio-menu">
+    <div class="filter-section">
+      <p class="filter-item active"><a href="#all">All Works</a></p>
+      <p class="filter-item"><a href="#network">Networking & Server</a></p>
+      <p class="filter-item"><a href="#application">Application Development</a></p>
+      <p class="filter-item"><a href="#web">Web Development</a></p>
+    </div>
+    <div class="filter-section secondary">
+      <p class="filter-item"><a href="#current">Current Development</a></p>
+      <p class="filter-item"><a href="#service">Service Computer</a></p>
+      <p class="filter-item"><a href="#hosting">Hosting</a></p>
+      <p class="filter-item"><a href="#android">Android / iOS</a></p>
+      <p class="filter-item"><a href="#gallery">Gallery</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Pencarian -->
+<section class="pencarian-section">
+  <div class="container-pencarian">
+    <input type="text" placeholder="Cari portofolio..." class="input-cari" />
+    <label class="label-tahun" for="tahun">Tahun:</label>
+    <select id="tahun" class="select-tahun">
+      <option value="">Semua</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+    </select>
+    <button class="btn-cari">Cari</button>
+  </div>
+</section>
+
+<!-- Section 4: Project Cards -->
+<section class="project-grid-section">
+
+    <div class="card-container">
+
+      <!-- Card 1 -->
+      <div class="project-card">
+        <div class="card-header">
+          <img src="/assets/mascitra.png" alt="Logo Politeknik" class="project-logo">
+          <h3>Politeknik Telkom Bandung</h3>
+          <p>Sistem Informasi Tugas Akhir<br>Politeknik Telkom Bandung</p>
+        </div>
+        <div class="card-social">
+          <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+          <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+          <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+          <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+        </div>
+        <div class="card-image">
+          <img src="/assets/ptb.png" alt="Project 1">
+          <a href="#" class="view-icon">👁️</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="project-card">
+        <div class="card-header">
+          <img src="/assets/mascitra.png" alt="Logo Dinkes" class="project-logo">
+          <h3>Dinas Kesehatan</h3>
+          <p>Sistem Informasi Manajemen Data Kesehatan<br>Kabupaten Jember</p>
+        </div>
+        <div class="card-social">
+          <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+          <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+          <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+          <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+        </div>
+        <div class="card-image">
+          <img src="/assets/dinkes.png" alt="Project 2">
+          <a href="#" class="view-icon">👁️</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="project-card">
+        <div class="card-header">
+          <img src="/assets/mascitra.png" alt="Logo Klinik" class="project-logo">
+          <h3>SIM Klinik Dokter Jember</h3>
+          <p>Sistem Informasi Manajemen Klinik<br>Dokter - android support</p>
+        </div>
+        <div class="card-social">
+          <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+          <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+          <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+          <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+        </div>
+        <div class="card-image">
+          <img src="/assets/klinik.png" alt="Project 3">
+          <a href="#" class="view-icon">👁️</a>
+        </div>
+      </div>
+
+    </div>
+</section>
+
 
 
 

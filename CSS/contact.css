@@ -1,0 +1,239 @@
+.lokasi-section {
+  padding: 60px 30px;
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+.lokasi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lokasi-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.lokasi-deskripsi {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+/* Kontainer dua kolom */
+.lokasi-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* KIRI: Carousel */
+.lokasi-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* Slide individual */
+.lokasi-slide {
+  display: none;
+  flex-direction: row; /* Sejajarkan horizontal */
+  align-items: stretch;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.lokasi-slide.active {
+  display: flex;
+}
+
+.lokasi-slide img {
+  width: 60%;
+  object-fit: cover;
+  height: auto;
+  display: block;
+}
+
+/* KANAN: Box Lokasi */
+.lokasi-box {
+  width: 40%;
+  padding: 30px;
+  font-size: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lokasi-box h4 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.lokasi-btn-maps {
+  margin-top: 1rem;
+  background-color: #ff5e00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.lokasi-btn-maps:hover {
+  background-color: #e04e00;
+}
+
+/* Carousel navigation */
+.lokasi-carousel-prev,
+.lokasi-carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 50%;
+}
+
+.lokasi-carousel-prev {
+  left: 10px;
+}
+
+.lokasi-carousel-next {
+  right: 10px;
+}
+
+/* Carousel dots */
+.lokasi-carousel-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.lokasi-dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lokasi-dot.active {
+  background-color: #ff5e00;
+}
+
+
+
+
+.contact-form-section {
+  padding: 60px 30px;
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Ilustrasi di sebelah kiri */
+.form-illustration {
+  flex: 1;
+}
+
+.form-illustration h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.form-illustration p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.form-illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Formulir di sebelah kanan */
+.contact-form {
+  flex: 1;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #ff5e00;
+}
+
+/* Grid untuk 2 kolom input */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Input & Textarea umum */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+/* Textarea khusus */
+.contact-form textarea {
+  height: 120px;
+}
+
+/* Tombol Submit */
+.contact-form button {
+  margin-top: 20px;
+  background-color: #ff5e00;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #d44b00;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e04e00;
+}

@@ -278,6 +278,11 @@ img {
   transform: scale(1.1);
   box-shadow: 0 12px 20px rgba(0,0,0,0.1);
 }
+.masalah-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .masalah-body {
   padding: 2rem;

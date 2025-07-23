@@ -1,0 +1,110 @@
+/* Font & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: linear-gradient(to right, rgba(16, 18, 65, 1), rgba(29, 33, 103, 1));
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+.navbar-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 170px;
+  height: auto;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  color: #fff;
+  display: none;
+  cursor: pointer;
+
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  gap: 32px; /* Atur jarak antar menu */
+
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-menu a:hover {
+  color: #38bdf8;
+}
+
+@media (max-width: 1024px){
+
+    .logo img{
+        width: 150px;
+    }
+}
+    
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    align-items: baseline;
+  }
+
+  .logo img{
+    width: 150px;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 72px;
+    right: 20px;
+    background: linear-gradient(to right, rgba(16, 18, 65, 1), rgba(29, 33, 103, 1));
+    flex-direction: column;
+    width: 180px;
+    padding: 16px;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    margin: 10px 0;
+  }
+}
+
+/* Optional: Hover effect smooth */
+.nav-menu a {
+  transition: all 0.3s ease;
+}

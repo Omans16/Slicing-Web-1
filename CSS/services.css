@@ -1,0 +1,117 @@
+/* Section Layanan Kami */
+
+.layanan-section {
+    padding: 5rem 2rem;
+    background-color: #fff;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.layanan-header h2 {
+  color: #003366;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+.layanan-line {
+    position: relative;
+    width: 300px;
+    height: 2px;
+    background-color: #000000;
+    margin-bottom: 20px;
+}
+
+.layanan.line::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.layanan-header p {
+  font-size: 1.2rem;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+  
+}
+
+.layanan-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 10 rem;
+  box-sizing: border-box;
+}
+
+
+/* Kiri & Kanan */
+.layanan-column {
+  flex: 1;
+  width: 260px;
+}
+
+.layanan-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.layanan-item img {
+  width: 50px;
+  height: 50px;
+  margin-left: 0px;
+}
+
+.layanan-item h4 {
+  margin-top: -10px;
+  font-size: clamp(1.1rem, 2vw, 1.3rem); /* Responsif */
+  font-weight: 700;
+  color: #003366;
+}
+
+.layanan-item p {
+  font-size: clamp(0.9rem, 1.8vw, 1rem); /* Responsif */
+  color: #444;
+  margin-top: 0.2rem;
+  max-width: 100%;
+  text-align: justify;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Gambar Tengah */
+.layanan-image {
+  flex: 1;
+  min-width: 400px;
+  text-align: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.layanan-image img {
+  max-width: 100%;
+  height: 280px;
+  margin-top: 0px;
+}

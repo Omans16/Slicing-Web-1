@@ -1,0 +1,319 @@
+/*About Header Section*/
+.about-header-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.about-header-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.about-header-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-header-paragraph {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.highlight-orange {
+  color: #f15a24;
+}
+
+/*Vidio Section*/
+.about-video-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.about-video-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.about-video-left,
+.about-video-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-video-main {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.about-video-play {
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-video-play-icon {
+  width: 60px;
+  height: 60px;
+}
+
+/*Our Skills Section*/
+.about-skill-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 80px 0 40px;
+  background-color: #fff;
+}
+
+.about-skill-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.about-skill-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-skill-paragraph {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-skill-circle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding-bottom: 60px;
+}
+
+.about-skill-circle-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.skill-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.circle-svg {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+}
+
+circle.bg {
+  fill: none;
+  stroke: #e6e6e6;
+  stroke-width: 10;
+}
+
+circle.progress {
+  fill: none;
+  stroke: #00264d;
+  stroke-width: 10;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 78.5; /* 75% dari 314 */
+  transition: stroke-dashoffset 1s ease;
+}
+
+.circle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.circle-label span {
+  font-size: 1rem;
+  color: #666;
+}
+
+.about-skill-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 40px 0 80px;
+}
+
+.about-skill-bar-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.bar-item {
+  margin-bottom: 25px;
+}
+
+.bar-label {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  display: inline-block;
+  color: #333;
+}
+
+.bar-track {
+  background-color: #e6e6e6;
+  height: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  background-color: #00264d;
+  height: 100%;
+  border-radius: 12px 0 0 12px;
+  transition: width 0.6s ease;
+}
+
+
+/*Team Section*/
+.about-team-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-team-container {
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.about-team-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.highlight-orange {
+  color: #ff6600;
+}
+
+.about-team-paragraph {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.about-team-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+.team-card-photo {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.team-card-info {
+  padding: 20px;
+}
+
+.team-social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #eee;
+  color: #333;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background-color: #333;
+  color: white;
+  transform: scale(1.1);
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.team-card-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.team-card-role {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.team-card-skill {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+
+
+
+

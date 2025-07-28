@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>about us</title>
+  <title>Web Profile MasCitra</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/navbar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/navbar1.css" />
     <link rel="stylesheet" href="/CSS/footer.css" />
     <link rel="stylesheet" href="/CSS/aboutus.css">
     <script src="/JS/navbar.js" defer></script>
@@ -16,12 +17,12 @@
     <header class="navbar">
       <div class="navbar-container">
         <div class="logo">
-          <img src="/assets/mascitra.png" alt="Logo" />
+          <img src="/assets/mascitra2.png" alt="Logo" />
         </div>
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         <nav class="nav-menu" id="nav-menu">
-          <a href="/HTML/home.html">Home</a>
-          <a href="/HTML/aboutus.html">About Us</a>
+          <a href="/HTML/home.html" >Home</a>
+          <a href="/HTML/aboutus.html" class="active">About Us</a>
           <a href="/HTML/services.html">Services</a>
           <a href="/HTML/portofolio.html">Portofolio</a>
           <a href="/HTML/blog.html">Blog</a>
@@ -44,18 +45,34 @@
 </section>
 
 <!-- About Video Section -->
-<section class="about-video-section">
-  <div class="about-video-container">
-    <div class="about-video-left">
-      <img src="assets/about-video-main.png" alt="Ilustrasi Video" class="about-video-main" />
-    </div>
-    <div class="about-video-right">
-      <div class="about-video-play">
-        <img src="assets/play-button.png" alt="Tombol Play" class="about-video-play-icon" />
+  <section class="mockup-section">
+    <div class="mockup-container">
+      
+      <!-- Panel Besar -->
+      <div class="panel-large">
+        <div class="image-icon">
+          <i class="fas fa-image"></i>
+        </div>
       </div>
+
+      <!-- Panel Kecil (overlapping) -->
+      <div class="panel-small">
+        <div class="play-button">
+          <i class="fas fa-play"></i>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
+
+    <!-- Dots -->
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
 
 <!-- Our Skill Section -->
 <section class="about-skill-section">
@@ -67,37 +84,43 @@
     </p>
   </div>
 
-   <div class="about-skill-circle-container">
-    <div class="skill-circle">
-      <svg class="circle-svg">
-        <circle class="bg" cx="60" cy="60" r="50"></circle>
-        <circle class="progress" cx="60" cy="60" r="50"></circle>
-      </svg>
-      <div class="circle-label">75%<br><span>PHP</span></div>
+    <div class="about-skill-circle-container">
+      <!-- 85% -->
+      <div class="skill-circle">
+        <svg class="circle-svg">
+          <circle class="bg" cx="80" cy="80" r="70"></circle>
+          <circle class="progress" cx="80" cy="80" r="70" style="stroke-dashoffset: 84.82;"></circle>
+        </svg>
+        <div class="circle-label"><h1>85%</h1><p>Laravel</p></div>
+      </div>
+
+      <!-- 95% -->
+      <div class="skill-circle">
+        <svg class="circle-svg">
+          <circle class="bg" cx="80" cy="80" r="70"></circle>
+          <circle class="progress" cx="80" cy="80" r="70" style="stroke-dashoffset: 28.27;"></circle>
+        </svg>
+        <div class="circle-label"><h1>95%</h1><p>PHP</p></div>
+      </div>
+      <!-- 85% -->
+      <div class="skill-circle">
+        <svg class="circle-svg">
+          <circle class="bg" cx="80" cy="80" r="70"></circle>
+          <circle class="progress" cx="80" cy="80" r="70" style="stroke-dashoffset: 84.82;"></circle>
+        </svg>
+        <div class="circle-label"><h1>85%</h1><p>JavaScript</p></div>
+      </div>
+
+      <!-- 95% -->
+      <div class="skill-circle">
+        <svg class="circle-svg">
+          <circle class="bg" cx="80" cy="80" r="70"></circle>
+          <circle class="progress" cx="80" cy="80" r="70" style="stroke-dashoffset: 28.27;"></circle>
+        </svg>
+        <div class="circle-label"><h1>95%</h1><p>HTML/CSS</p></div>
+      </div>
     </div>
-    <!-- Duplikat 3x jika butuh 4 lingkaran -->
-    <div class="skill-circle">
-      <svg class="circle-svg">
-        <circle class="bg" cx="60" cy="60" r="50"></circle>
-        <circle class="progress" cx="60" cy="60" r="50"></circle>
-      </svg>
-      <div class="circle-label">75%<br><span>PHP</span></div>
-    </div>
-    <div class="skill-circle">
-      <svg class="circle-svg">
-        <circle class="bg" cx="60" cy="60" r="50"></circle>
-        <circle class="progress" cx="60" cy="60" r="50"></circle>
-      </svg>
-      <div class="circle-label">75%<br><span>PHP</span></div>
-    </div>
-    <div class="skill-circle">
-      <svg class="circle-svg">
-        <circle class="bg" cx="60" cy="60" r="50"></circle>
-        <circle class="progress" cx="60" cy="60" r="50"></circle>
-      </svg>
-      <div class="circle-label">75%<br><span>PHP</span></div>
-    </div>
-  </div>
+      
 
     <div class="about-skill-bar-container">
     <div class="bar-item">
@@ -106,17 +129,16 @@
         <div class="bar-fill" style="width: 75%"></div>
       </div>
     </div>
-    <!-- Tambahkan lebih banyak bar jika diperlukan -->
     <div class="bar-item">
       <span class="bar-label">Mobile</span>
       <div class="bar-track">
-        <div class="bar-fill" style="width: 72%"></div>
+        <div class="bar-fill" style="width: 75%"></div>
       </div>
     </div>
     <div class="bar-item">
       <span class="bar-label">Mobile</span>
       <div class="bar-track">
-        <div class="bar-fill" style="width: 70%"></div>
+        <div class="bar-fill" style="width: 75%"></div>
       </div>
     </div>
   </div>
@@ -132,7 +154,7 @@
       Team adalah bagian yang penting bagi kami. Kami sangat menghargai setiap pengabdian setiap individu team MasCitra.com.
     </p>
   </div>
-          <!-- Tambah card 1 -->
+
           <div class="about-team-card-container">
             <div class="team-card">
               <img src="/assets/r.jpg" alt="Foto Tim" class="team-card-photo" />
@@ -164,12 +186,11 @@
                 </div>
                 <h3 class="team-card-name">Muhamad Nur Rohman</h3>
                 <p class="team-card-role">Front-End</p>
-                <p class="team-card-skill">CSS3 - PHP - MYSQL - JS - JAVA</p>
+                <p class="team-card-skill">Python - PHP - HTML-CSS - JS <br> DART</p>
               </div>
             </div>
 
-            <!-- Tambah card lain di sini -->
-            <!-- Tambah card 1 -->
+
             <div class="about-team-card-container">
               <div class="team-card">
                 <img src="/assets/r.jpg" alt="Foto Tim" class="team-card-photo" />
@@ -205,7 +226,7 @@
                 </div>
               </div>
 
-              <!-- Tambah card lain di sini -->
+
             </div>
           </div>
         </section>

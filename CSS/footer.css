@@ -232,11 +232,7 @@ h1, h2, h3, p, a {
     flex: 1 1 10%;
     width: 30%;
 }
-.app-buttons {
-        flex-direction: row;
-        align-items: left;
-        width: 150px; 
-    }
+
 .app-button {
     display: flex;
     align-items: center;
@@ -253,7 +249,11 @@ h1, h2, h3, p, a {
 .app-button svg{
   width: 10px;
 }
-
+.app-buttons {
+        flex-direction: row;
+        align-items: left;
+        width: 100px;
+    }
 .footer-section:not(.contact)
  {
     flex: 1 1 20%;
@@ -262,6 +262,7 @@ h1, h2, h3, p, a {
   .footer-section h3{
     font-size: 0.8rem;
     margin-bottom: 1rem;
+    width: 120px;
     color: rgba(255, 255, 255, 0.8);
 }
 .footer-section p{

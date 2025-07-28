@@ -1,3 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
 /* Section 1: Header */
 .portofolio-section {
   padding: 60px 20px;
@@ -5,7 +17,7 @@
   text-align: center;
 }
 .portofolio-judul {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 .portofolio-subjudul {
@@ -15,32 +27,64 @@
 
 /* Section 2: Menu */
 .portfolio-menu-section {
-  background-color: #0d1c30;
+  background: linear-gradient(to right, rgba(16, 18, 65, 1), rgba(29, 33, 103, 1));
   padding: 20px 0;
   color: white;
 }
+
 .portfolio-menu {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0 20px;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px 20px;
+  align-items: center;
 }
+
 .filter-section {
   display: flex;
-  gap: 15px;
+  gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
 }
-.filter-item a {
+
+/* Shared styles untuk tombol dan link */
+.filter-item {
   color: white;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-family: inherit;
+  padding: 8px 12px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
 }
-.filter-item.active a {
+
+.filter-item:hover,
+.filter-item:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  outline: none;
+}
+
+/* Aktif state */
+.filter-item.active,
+.filter-item.active:hover {
   font-weight: bold;
   text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.25);
 }
+
+/* Untuk a.tag tetap mengikuti style */
+.filter-section.secondary .filter-item {
+  display: inline-block;
+    padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
 
 /* Section 3: Pencarian */
 .pencarian-section {
@@ -55,27 +99,18 @@
   padding-left: 20px;
   align-items: center;
 }
-.input-cari, .select-tahun, .btn-cari {
+.input-cari, .select-tahun {
   padding: 10px;
   font-size: 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-.btn-cari {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-.btn-cari:hover {
-  background-color: #0056b3;
-}
+
 
 /* Section 4: Project Cards */
-/* Section Project */
 .project-grid-section {
   padding: 60px 0;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #000;
   text-align: center;
 }
@@ -85,8 +120,10 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
+
+
 
 /* Card */
 .project-card {
@@ -94,35 +131,40 @@
   color: #000;
   border-radius: 20px;
   overflow: hidden;
-  max-width: 380px;
+  max-width: 400px;
   width: 100%;
-  height: auto;
+  height: 500px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  display: flex;
+  display: grid;
   flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* opsional: bayangan lebih besar */
+}
 /* Card Header */
 .card-header {
-  background-color: #0d3d7d;
+    background: linear-gradient(to right, rgba(16, 18, 65, 1), rgba(29, 33, 103, 1));
   color: white;
   padding: 20px 15px 10px;
   position: relative;
   text-align: left;
 }
 .card-header .project-logo {
-  width: 100px;
+  max-width: 120px;
   position: absolute;
   top: 20px;
   left: 20px;
 }
 .card-header h3 {
   font-size: 1.2rem;
-  margin: 60px 0 5px 0;
+  margin: 50px 0 5px 0;
   text-align: center;
 }
 .card-header p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.4;
   text-align: center;
 }
@@ -152,23 +194,293 @@
 .card-image {
   position: relative;
   text-align: center;
-  margin-top: 10px;
+  padding: 20px;
+  background-color: #e2e2e2;
 }
 .card-image img {
-  width: 90%;
-  border-top: 1px solid #eee;
-  padding-top: 5px;
+  width: 100%;
+  border-radius: 10px;
 }
-.view-icon {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  /* Section 1: Judul Portofolio */
+  .portofolio-section {
+    padding: 40px 10px;
+  }
+  .portofolio-judul {
+    font-size: 2.2rem;
+  }
+  .portofolio-subjudul {
+    font-size: 1rem;
+  }
+
+  /* Section 2: Menu Portofolio */
+  .portfolio-menu {
+    gap: 15px;
+    padding: 10px 5px;
+  }
+  .filter-section {
+    gap: 15px;
+  }
+  .filter-item {
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+
+  /* Section 3: Pencarian */
+  .container-pencarian {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-left: 10px;
+  }
+  .pencarian-section{
+    padding: 20px 90px;
+  }
+  .input-cari, .select-tahun {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  /*Project Card*/
+    .project-grid-section {
+    padding: 40px 0;
+  }
+  .card-container {
+    gap: 25px;
+  }
+  .project-card {
+    max-width: 270px;
+    height: 400px;
+  }
+.card-header .project-logo {
+  max-width: 80px;
   position: absolute;
-  bottom: -30px;
-  right: 15px;
-  background: white;
-  border-radius: 50%;
-  font-size: 10px;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  color: black;
-  padding: 5px;
-  transition: background 0.3s ease;
+  top: 20px;
+  left: 15px;
+}
+  .card-header h3 {
+    font-size: 1rem;
+    margin-top: 40px;
+  }
+  .card-header p {
+    font-size: 0.85rem;
+  }
+  .card-social div {
+    font-size: 8px;
+  }
+  .card-social img {
+    width: 9px;
+    height: 9px;
+  }
+  .card-image {
+    padding: 12px;
+  }
+}
+
+/* Responsive: Tablet Kecil / Mobile Landscape (768px ke bawah) */
+@media (max-width: 768px) {
+  /* Section 1: Judul Portofolio */
+  .portofolio-section {
+    padding: 30px 5px;
+  }
+  .portofolio-judul {
+    font-size: 1.5rem;
+  }
+  .portofolio-subjudul {
+    font-size: 0.95rem;
+  }
+
+  /* Section 2: Menu Portofolio */
+  .portfolio-menu {
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 2px;
+  }
+  .filter-section {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .filter-item {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  /* Section 3: Pencarian */
+  .container-pencarian {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 6px;
+    padding-left: 0;
+  }
+  .input-cari{
+    width: 30%;
+    font-size: 0.9rem;
+    padding: 7px;
+    margin: 0 auto;
+    margin-left: 100px;
+  }
+  .select-tahun{
+    margin: 0 auto;
+    margin-right: 150px;
+  }
+  .label-tahun {
+    margin-top: 5px;
+  }
+
+  /*ProjectCard Section*/
+  .project-grid-section {
+    padding: 20px 0;
+  }
+  .card-container {
+    gap: 15px;
+  }
+  .project-card {
+    max-width: 220px;
+    height: 330px;
+  }
+  .card-header {
+    padding: 12px 8px 6px;
+  }
+.card-header .project-logo {
+  max-width: 60px;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}
+  .card-header h3 {
+    font-size: 0.85rem;
+    margin-top: 30px;
+  }
+  .card-header p {
+    font-size: 0.7rem;
+  }
+  .card-social {
+    padding: 6px;
+    gap: 3px;
+  }
+  .card-social div {
+    font-size: 7px;
+  }
+  .card-social img {
+    width: 8px;
+    height: 8px;
+  }
+  .card-image {
+    padding: 8px;
+  }
+  .card-image img {
+    border-radius: 7px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  /* Section 1: Judul Portofolio */
+  .portofolio-section {
+    padding: 15px 2px;
+  }
+  .portofolio-judul {
+    font-size: 1.1rem;
+  }
+  .portofolio-subjudul {
+    font-size: 0.8rem;
+  }
+
+  /* Section 2: Menu Portofolio */
+  .portfolio-menu {
+    gap: 5px;
+    padding: 2px 0;
+    width: 440px;
+  }
+    .filter-item {
+        font-size: 0.9rem;
+        padding: 3px 5px;
+    }
+
+  /* Section 3: Pencarian */
+  .container-pencarian {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 4px;
+    padding-left: 0;
+  }
+  .input-cari{
+    width: 40%;
+    font-size: 0.8rem;
+    padding: 7px;
+    margin: 0 auto;
+    margin-left: 10px;
+  }
+  .select-tahun{
+    margin: 0 auto;
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+  .label-tahun {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
+  /*ProjectCard Section*/
+  .project-logo {
+    width: 100px;
+    top: 20px;
+    left: 20px;
+  }
+  .project-grid-section {
+    padding: 20px 0;
+  }
+  .card-container {
+    gap: 15px;
+  }
+  .project-card {
+    max-width: 200px;
+    height: 310px;
+  }
+  .card-header {
+    padding: 12px 8px 6px;
+  }
+.card-header .project-logo {
+  max-width: 55px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+}
+  .card-header h3 {
+    font-size: 0.75rem;
+    margin-top: 30px;
+  }
+  .card-header p {
+    font-size: 0.6rem;
+  }
+  .card-social {
+    padding: 6px;
+    gap: 3px;
+  }
+  .card-social div {
+    font-size: 7px;
+  }
+  .card-social img {
+    width: 8px;
+    height: 8px;
+  }
+  .card-image {
+    padding: 8px;
+  }
+  .card-image img {
+    border-radius: 7px;
+  }
 }

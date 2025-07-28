@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>project</title>
+  <title>Web Profile MasCitra</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/navbar.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/CSS/navbar1.css" />
     <link rel="stylesheet" href="/CSS/footer.css" />
     <link rel="stylesheet" href="/CSS/portofolio.css">
     <script src="/JS/navbar.js" defer></script>
+    <script src="/JS/portofolio.js" defer></script>
 
 </head>
 <body>
@@ -16,14 +18,14 @@
     <header class="navbar">
       <div class="navbar-container">
         <div class="logo">
-          <img src="/assets/mascitra.png" alt="Logo" />
+          <img src="/assets/mascitra2.png" alt="Logo" />
         </div>
         <div class="menu-toggle" id="menu-toggle">&#9776;</div>
         <nav class="nav-menu" id="nav-menu">
           <a href="/HTML/home.html">Home</a>
           <a href="/HTML/aboutus.html">About Us</a>
           <a href="/HTML/services.html">Services</a>
-          <a href="/HTML/portofolio.html">Portofolio</a>
+          <a href="/HTML/portofolio.html" class="active">Portofolio</a>
           <a href="/HTML/blog.html">Blog</a>
           <a href="/HTML/contact.html">Contact</a>
         </nav>
@@ -43,21 +45,27 @@
 <!-- Section 2: Menu Portofolio -->
 <section class="portfolio-menu-section">
   <div class="portfolio-menu">
+    <!-- Filter Utama -->
     <div class="filter-section">
-      <p class="filter-item active"><a href="#all">All Works</a></p>
-      <p class="filter-item"><a href="#network">Networking & Server</a></p>
-      <p class="filter-item"><a href="#application">Application Development</a></p>
-      <p class="filter-item"><a href="#web">Web Development</a></p>
+      <button class="filter-item active" data-filter="all">All Works</button>
+      <button class="filter-item" data-filter="network">Networking & Server</button>
+      <button class="filter-item" data-filter="application">Application Development</button>
+      <button class="filter-item" data-filter="web">Web Development</button>
+      <button class="filter-item" data-filter="android">Android / iOS</button>
     </div>
+
+    <!-- Filter Secondary (Link ke section lain atau filter kategori) -->
     <div class="filter-section secondary">
-      <p class="filter-item"><a href="#current">Current Development</a></p>
-      <p class="filter-item"><a href="#service">Service Computer</a></p>
-      <p class="filter-item"><a href="#hosting">Hosting</a></p>
-      <p class="filter-item"><a href="#android">Android / iOS</a></p>
-      <p class="filter-item"><a href="#gallery">Gallery</a></p>
+      <a class="filter-item" data-kategori="Current" href="javascript:void(0)">Current Development</a>
+      <a class="filter-item" href="#service">Service Computer</a>
+      <a class="filter-item" data-kategori="hosting">Hosting</a>
+      <a class="filter-item" href="#android">Android / iOS</a>
+      <a class="filter-item" href="#gallery">Gallery</a>
     </div>
   </div>
 </section>
+
+
 
 <!-- Section 3: Pencarian -->
 <section class="pencarian-section">
@@ -70,74 +78,479 @@
       <option value="2023">2023</option>
       <option value="2022">2022</option>
     </select>
-    <button class="btn-cari">Cari</button>
   </div>
 </section>
 
+
+
 <!-- Section 4: Project Cards -->
 <section class="project-grid-section">
+  <div class="card-container">
+    
+    <!-- Card 1 -->
+    <div class="project-card" 
+         data-nama="Politeknik Telkom Bandung" 
+         data-tahun="2024" 
+         data-kategori="application hosting Current android">
 
-    <div class="card-container">
-
-      <!-- Card 1 -->
-      <div class="project-card">
-        <div class="card-header">
-          <img src="/assets/mascitra.png" alt="Logo Politeknik" class="project-logo">
-          <h3>Politeknik Telkom Bandung</h3>
-          <p>Sistem Informasi Tugas Akhir<br>Politeknik Telkom Bandung</p>
-        </div>
-        <div class="card-social">
-          <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
-          <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
-          <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
-          <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
-        </div>
-        <div class="card-image">
-          <img src="/assets/ptb.png" alt="Project 1">
-          <a href="#" class="view-icon">👁️</a>
-        </div>
+      <div class="card-header">
+        <img src="/assets/mascitra.png" alt="Logo Politeknik" class="project-logo">
+        <h3>Politeknik Telkom Bandung</h3>
+        <p>Sistem Informasi Tugas Akhir<br>Politeknik Telkom Bandung</p>
       </div>
 
+      <div class="card-social">
+        <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+        <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+        <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+        <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+      </div>
+
+      <div class="card-image">
+        <img src="/assets/ptb.png" alt="Project 1">
+      </div>
+    </div>
+
       <!-- Card 2 -->
-      <div class="project-card">
+      <div class="project-card" 
+          data-nama="Dinas Kesehatan" 
+          data-tahun="2023" 
+          data-kategori="web application hosting">
+
         <div class="card-header">
           <img src="/assets/mascitra.png" alt="Logo Dinkes" class="project-logo">
           <h3>Dinas Kesehatan</h3>
           <p>Sistem Informasi Manajemen Data Kesehatan<br>Kabupaten Jember</p>
         </div>
+
         <div class="card-social">
           <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
           <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
           <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
           <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
         </div>
+
         <div class="card-image">
           <img src="/assets/dinkes.png" alt="Project 2">
-          <a href="#" class="view-icon">👁️</a>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="project-card">
+      <div class="project-card" 
+          data-nama="SIM Klinik Dokter Jember" 
+          data-tahun="2023" 
+          data-kategori="application android">
+
         <div class="card-header">
           <img src="/assets/mascitra.png" alt="Logo Klinik" class="project-logo">
           <h3>SIM Klinik Dokter Jember</h3>
           <p>Sistem Informasi Manajemen Klinik<br>Dokter - android support</p>
         </div>
+
         <div class="card-social">
           <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
           <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
           <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
           <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
         </div>
+
         <div class="card-image">
           <img src="/assets/klinik.png" alt="Project 3">
-          <a href="#" class="view-icon">👁️</a>
         </div>
       </div>
+        <!-- Card 4 -->
+        <div class="project-card" 
+            data-nama="Komdat Dinkes Katib. Jember" 
+            data-tahun="2023" 
+            data-kategori="application android">
 
-    </div>
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo Komdat" class="project-logo">
+            <h3>Komdat Dinkes Katib. Jember</h3>
+            <p>Sistem Informasi Komunikasi Data Dinas Kesehatan Kabupaten Jember</p>
+          </div>
+
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+
+          <div class="card-image">
+            <img src="/assets/kuliahtamu.png" alt="Komdat Dinkes Jember">
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="project-card" 
+            data-nama="SIKD Kabupaten Jember" 
+            data-tahun="2023" 
+            data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo SIKD" class="project-logo">
+            <h3>SIKD Kabupaten Jember</h3>
+            <p>Sistem Informasi Kinerja Daerah Kabupaten Jember</p>
+          </div>
+
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+
+          <div class="card-image">
+            <img src="/assets/ptb.png" alt="SIKD Jember">
+          </div>
+        </div>
+
+          <!-- Card 6 -->
+          <div class="project-card" 
+              data-nama="SIPUP Disperindag Jember" 
+              data-tahun="2022" 
+              data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo SIPUP" class="project-logo">
+            <h3>SIPUP Disperindag Jember</h3>
+            <p>Sistem Informasi dan Pelaporan Usaha Pertambangan Kabupaten Jember</p>
+          </div>
+
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+
+          <div class="card-image">
+            <img src="/assets/unair.png" alt="SIPUP Jember">
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="project-card" 
+            data-nama="Dinas Pasar Jember" 
+            data-tahun="2022" 
+            data-kategori="web">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo Pasar" class="project-logo">
+            <h3>Dinas Pasar Jember</h3>
+            <p>Sistem Informasi Dinas Pasar Kabupaten Jember</p>
+          </div>
+
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+
+          <div class="card-image">
+            <img src="/assets/pemkabjember.png" alt="Dinas Pasar Jember">
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="project-card" 
+            data-nama="SIMKEU Unej" 
+            data-tahun="2023" 
+            data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo Unej" class="project-logo">
+            <h3>SIMKEU Unej</h3>
+            <p>Sistem Informasi Keuangan Universitas Jember (SIMKEU)</p>
+          </div>
+
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+
+          <div class="card-image">
+            <img src="/assets/kominfo.png" alt="SIMKEU UNEJ">
+          </div>
+        </div>
+
+          <!-- Card 9 -->
+          <div class="project-card" 
+              data-nama="SIMBMD Kab. Pasuruan" 
+              data-tahun="2024" 
+              data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo SIMBMD" class="project-logo">
+            <h3>SIMBMD Kab. Pasuruan</h3>
+            <p>Sistem Informasi Manajemen Barang Milik Daerah Kabupaten Pasuruan</p>
+          </div>
+
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+
+          <div class="card-image">
+            <img src="/assets/service owner.png" alt="SIMBMD Pasuruan">
+          </div>
+        </div>
+
+          <!-- Card 10 -->
+          <div class="project-card" 
+              data-nama="PLN APJ Jember" 
+              data-tahun="2023" 
+              data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo PLN" class="project-logo">
+            <h3>PLN APJ Jember</h3>
+            <p>Sistem Informasi Pelayanan Satu Atap PLN APJ Jember</p>
+          </div>
+
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="PLN APJ Jember">
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="project-card" 
+            data-nama="E-commerce Senyum Media" 
+            data-tahun="2023" 
+            data-kategori="web">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo Senyum Media" class="project-logo">
+            <h3>E-commerce Senyum Media</h3>
+            <p>Website Toko Online Senyummedia.com</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="E-commerce Senyum Media">
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="project-card" 
+            data-nama="E-Kelurahan Kab. Jember" 
+            data-tahun="2023" 
+            data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo E-Kelurahan" class="project-logo">
+            <h3>E-Kelurahan Kab. Jember</h3>
+            <p>Aplikasi Sistem Informasi Manajemen E-Kelurahan sebagai media pelayanan publik</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="E-Kelurahan">
+          </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="project-card" 
+            data-nama="E-Office Kab. Lumajang" 
+            data-tahun="2023" 
+            data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo E-Office" class="project-logo">
+            <h3>E-Office Kab. Lumajang</h3>
+            <p>Naskah Dinas Elektronik (NADINE) Pemerintah Kabupaten Lumajang</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="E-Office Lumajang">
+          </div>
+        </div>
+
+        <!-- Card 14 -->
+        <div class="project-card" 
+            data-nama="SIPRO Kementerian PUPR" 
+            data-tahun="2023" 
+            data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo SIPRO" class="project-logo">
+            <h3>SIPRO Kementerian PUPR</h3>
+            <p>Aplikasi Sistem Informasi Pemrograman milik Kementerian PUPR</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="SIPRO PUPR">
+          </div>
+        </div>
+
+        <!-- Card 15 -->
+        <div class="project-card" 
+            data-nama="Simpul Kab. Lumajang" 
+            data-tahun="2023" 
+            data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo Simpul" class="project-logo">
+            <h3>Simpul Kab. Lumajang</h3>
+            <p>Sistem Informasi Puskesmas Kabupaten Lumajang</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="Simpul Lumajang">
+          </div>
+        </div>
+
+        <!-- Card 16 -->
+        <div class="project-card" 
+            data-nama="Marketplace Jawa Pos" 
+            data-tahun="2023" 
+            data-kategori="web android">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo Jawa Pos" class="project-logo">
+            <h3>Marketplace Jawa Pos</h3>
+            <p>Marketplace milik Jawa Pos yang berbasis web dan android</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="Marketplace Jawa Pos">
+          </div>
+        </div>
+
+        <!-- Card 17 -->
+        <div class="project-card" 
+            data-nama="SIPLah Jawa Pos" 
+            data-tahun="2023" 
+            data-kategori="web android">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo SIPLah" class="project-logo">
+            <h3>SIPLah Jawa Pos</h3>
+            <p>Sistem Informasi Pengadaan Sekolah milik Jawa Pos berbasis web dan android</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="SIPLah Jawa Pos">
+          </div>
+        </div>
+
+        <!-- Card 18 -->
+        <div class="project-card" 
+            data-nama="PPM Manajemen" 
+            data-tahun="2023" 
+            data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo PPM" class="project-logo">
+            <h3>PPM Manajemen</h3>
+            <p>Sistem Informasi Asesmen Mandiri PPM Manajemen</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="PPM Manajemen">
+          </div>
+        </div>
+
+        <!-- Card 19 -->
+        <div class="project-card" 
+            data-nama="MONIKA - Ditjen SDA" 
+            data-tahun="2023" 
+            data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo MONIKA" class="project-logo">
+            <h3>MONIKA - Ditjen SDA</h3>
+            <p>Aplikasi Monitoring Kegiatan SDA milik Direktorat Jenderal Sumber Daya Air</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="MONIKA Ditjen SDA">
+          </div>
+        </div>
+
+        <!-- Card 20 -->
+        <div class="project-card" 
+            data-nama="Sidia Kab. Pasuruan" 
+            data-tahun="2024" 
+            data-kategori="application">
+
+          <div class="card-header">
+            <img src="/assets/mascitra.png" alt="Logo Sidia" class="project-logo">
+            <h3>Sidia Kab. Pasuruan</h3>
+            <p>Sistem Informasi Persediaan milik Kabupaten Pasuruan</p>
+          </div>
+          <div class="card-social">
+            <div><img src="/assets/ig.png" alt="Instagram"> mascitra.official</div>
+            <div><img src="/assets/telp.png" alt="Telp"> 0331-4350050</div>
+            <div><img src="/assets/website.png" alt="Web"> www.mascitra.com</div>
+            <div><img src="/assets/mail.png" alt="Email"> info@mascitra.co.id</div>
+          </div>
+          <div class="card-image">
+            <img src="/assets/iconpicture.png" alt="Sidia Pasuruan">
+          </div>
+        </div>
+
+</div>
 </section>
+
+
+
 
 
 
@@ -212,23 +625,15 @@
             
             <div class="footer-bottom">
                 <div class="social-links">
-                    <a href="#" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12,2.04C6.5,2.04 2,6.53 2,12.06C2,17.06 5.66,21.21 10.44,21.96V14.96H7.9V12.06H10.44V9.85C10.44,7.34 11.93,5.96 14.22,5.96C15.31,5.96 16.45,6.15 16.45,6.15V8.62H15.19C13.95,8.62 13.56,9.39 13.56,10.18V12.06H16.34L15.89,14.96H13.56V21.96A10,10 0 0,0 22,12.06C22,6.53 17.5,2.04 12,2.04Z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
-                        </svg>
-                    </a>
-                </div>
-                
+                  <a href="#" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                    <i class="fab fa-youtube"></i>
+                  </a>
                 <div class="logo-copyright">
                     <div class="logoso">
                     <img src="/assets/mascitra.png" alt="Logo" />

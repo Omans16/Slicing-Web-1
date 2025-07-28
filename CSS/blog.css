@@ -1,5 +1,5 @@
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -34,22 +34,48 @@
   border-radius: 6px;
   cursor: pointer;
 }
+/* Shared styles untuk tombol dan link */
 .filter-menu {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 20px;
 }
+
 .filter-item {
-  padding: 6px 12px;
+  padding: 8px 16px;
   font-size: 14px;
-  cursor: pointer;
-}
-.filter-item.active {
-  border: 1px solid #ccc;
+  font-weight: 500;
+  border: 1px solid transparent;
   border-radius: 20px;
+  background-color: #f1f1f1;
+  color: #474747;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.filter-item:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-item.active {
+  background-color: rgb(126, 126, 126);
+  color: #ffffff;
+  border-color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .highlight-content {
   display: flex;
   gap: 20px;
@@ -168,6 +194,13 @@
   font-weight: 500;
 }
 
+.year-toggle.active,
+.year-toggle:hover {
+  background: #ff6600;
+  color: white;
+}
+
+
 .month-list {
   list-style: none;
   padding-left: 0;
@@ -197,7 +230,11 @@
   border-radius: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-
+.tags-widget h3{
+  margin-top: -23px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+}
 .tags-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -217,4 +254,154 @@
 .tag:hover {
   background: #ff6600;
   color: white;
+}
+
+
+
+/*Responsive: Tablet (1024px ke bawah)*/
+@media (max-width: 1024px) {
+
+}
+
+/* ========== Responsive: Tablet Kecil / Mobile Landscape (768px ke bawah) ========== */
+@media (max-width: 768px) {
+
+}
+
+/* ========== Responsive: Mobile (480px ke bawah) ========== */
+@media (max-width: 480px) {
+.blog-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.blog-subtitle {
+  font-size: 0.9rem;
+}
+.filter-item {
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    color: #474747;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.highlight-content {
+    gap: 10px;
+    margin-top: 10px;
+}
+.highlight-content img {
+    width: 40%;
+    border-radius: 8px;
+}
+.highlight-text h2 {
+    font-size: 1rem;
+}
+.highlight-text p {
+    font-size: 0.7rem;
+}
+.highlight-meta {
+    margin-top: 10px;
+    color: #999;
+    font-size: 0.8rem;
+}
+
+
+.articles-area {
+    flex: 1;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.blog-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+.blog-info h3 {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: #222;
+    width: 180px;
+}
+.blog-info p {
+    font-size: 0.7rem;
+    color: #555;
+}
+.blog-info a {
+    font-size: 0.7rem;
+    color: #555;
+}
+
+
+
+.archive-widget {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.archive-header i {
+    font-size: 0.8rem;
+}
+.archive-header h3 {
+    font-size: 0.8rem;
+}
+.year-toggle {
+    background: none;
+    border: 1px solid #ff6600;
+    color: #ff6600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 90%;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.6rem;
+    margin-bottom: 5px;
+}
+.month-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+}
+.month-list li {
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    font-size: 0.6rem;
+    margin-left: 15px;
+}
+.count {
+    background: #ff6600;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 20px;
+    font-size: 0.4rem;
+    margin-right: 15px;
+}
+.tags-widget h3{
+  font-size: 0.9rem;
+  width: 50px;
+  margin-top: -20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+.tag {
+    padding: 4px 9px;
+    background: #f0f0f0;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 }

@@ -10,7 +10,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
-  background: linear-gradient(to right, rgba(16, 18, 65, 1), rgba(29, 33, 103, 1));
+  background: white;
   padding: 16px 0;
   position: fixed;
   overflow: visible;
@@ -39,7 +39,7 @@ body {
 
 .menu-toggle {
   font-size: 26px;
-  color: #fff;
+  color: #333;
   display: none;
   cursor: pointer;
 
@@ -55,7 +55,7 @@ body {
 .nav-menu a {
   text-decoration: none;
   padding: 10px 15px;
-  color: #fff;
+  color: #333;
   transition: all 0.3s ease;
   font-size: 1rem;
 }
@@ -68,9 +68,9 @@ body {
   height: 100%;
   background: linear-gradient(
     120deg,
-    rgba(255, 255, 255, 0) 0%,
+    hsl(32, 100%, 91%) 0%,
     rgba(255, 255, 255, 0.25) 50%,
-    rgba(255, 255, 255, 0) 100%
+    #ffe5c6 100%
   );
 pointer-events: none;
 }
@@ -98,19 +98,30 @@ pointer-events: none;
 }
 
 .nav-menu a:hover {
-  color: orange;
+  color: #ff5003;
 }
 .nav-menu a.active {
   font-size: 1.15rem;
   font-weight: bold;
-  border-bottom: 3px solid orange;
-  color: orange;
+  border-bottom: 3px solid #ff5003;
+  color: #ff5003;
 }
-
 
 .nav-menu a:hover {
-  color: orange;
+  color: #ff5003;
 }
+
+.social-link i {
+  font-size: 24px; /* atau 1.5rem */
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.social-link i:hover {
+  color: #ff6600; /* warna saat hover */
+}
+
+
 
 @media (max-width: 1024px){
 .nav-menu{
@@ -119,7 +130,7 @@ pointer-events: none;
 .nav-menu a {
     text-decoration: none;
     padding: 10px 5px;
-    color: #fff;
+    color:#333 ;
     transition: all 0.3s ease;
     font-size: 0.8rem;
 }
@@ -146,7 +157,7 @@ pointer-events: none;
     position: absolute;
     top: 82px;
     right: 70px;
-    background: linear-gradient(to right, rgba(16, 18, 65, 1), rgba(29, 33, 103, 1));
+    background: #333;
     flex-direction: column;
     width: 180px;
     padding: 10px;
@@ -169,6 +180,7 @@ pointer-events: none;
     margin: 0px 0;
     transition: all 0.3 ease;
     font-size: 1.1rem;
+        color:#ffffff ;
   }
   .nav-menu a.active{
     font-size: 1rem;

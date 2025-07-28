@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 /*About Header Section*/
 .about-header-section {
   width: 100%;
@@ -24,185 +28,248 @@
   font-size: 1.5rem;
   line-height: 1.6;
   color: #333;
+  max-width: 1100px;
 }
 
 .highlight-orange {
-  color: #f15a24;
+  color: #ff5003;
 }
 
 /*Vidio Section*/
-.about-video-section {
-  width: 100%;
+.mockup-section {
+  padding: 60px 20px;
   display: flex;
-  justify-content: center;
-  padding: 80px 0;
-  background-color: #f9f9f9;
-}
-
-.about-video-container {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  padding: 0 20px;
-}
-
-.about-video-left,
-.about-video-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.about-video-main {
-  max-width: 100%;
-  border-radius: 20px;
+.mockup-container {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  background-color: transparent;
 }
 
-.about-video-play {
-  width: 200px;
-  height: 200px;
-  background-color: #fff;
+.panel-large {
+  width: 100%;
+  height: 100%;
+  background-color: #d9d9d9;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.about-video-play-icon {
+.image-icon i {
+  font-size: 100px;
+  color: #555;
+}
+
+.panel-small {
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  transform: translateY(-50%);
+  width: 250px;
+  height: 160px;
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  border: 5px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
   width: 60px;
   height: 60px;
+  background-color: #e53935;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.play-button i {
+  color: white;
+  font-size: 24px;
+  margin-left: 3px;
+}
+
+.dots {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background-color: #888;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.dot.active {
+  opacity: 1;
 }
 
 /*Our Skills Section*/
+/* ======= Our Skills Section ======= */
 .about-skill-section {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 80px 0 40px;
+  padding: 80px 20px;
   background-color: #fff;
+  text-align: center;
 }
 
 .about-skill-container {
   max-width: 1200px;
-  width: 100%;
-  text-align: center;
-  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .about-skill-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 2.8rem;
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .about-skill-paragraph {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.2rem;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 60px;
   line-height: 1.6;
 }
 
-.about-skill-circle {
-  width: 100%;
+/* === Circular Skill === */
+.about-skill-circle-container {
   display: flex;
   justify-content: center;
-  background-color: #fff;
-  padding-bottom: 60px;
-}
-
-.about-skill-circle-container {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   gap: 40px;
+  margin-bottom: 60px;
 }
 
 .skill-circle {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
 }
 
 .circle-svg {
-  width: 120px;
-  height: 120px;
-  transform: rotate(-90deg);
+  width: 160px;
+  height: 160px;
 }
 
 circle.bg {
   fill: none;
   stroke: #e6e6e6;
-  stroke-width: 10;
+  stroke-width: 20;
 }
 
 circle.progress {
   fill: none;
-  stroke: #00264d;
-  stroke-width: 10;
-  stroke-dasharray: 314;
-  stroke-dashoffset: 78.5; /* 75% dari 314 */
-  transition: stroke-dashoffset 1s ease;
+  stroke: #003366;
+  stroke-width: 14;
+  stroke-dasharray: 439.82;
+  transition: stroke-dashoffset 0.8s ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
 }
 
 .circle-label {
   position: absolute;
   top: 50%;
   left: 50%;
-  text-align: center;
+  width: 90px;
+  height: 90px;
+  background-color: #003366;
+  border-radius: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-.circle-label span {
-  font-size: 1rem;
-  color: #666;
-}
-
-.about-skill-bar {
-  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background-color: #fff;
-  padding: 40px 0 80px;
+  color: #fff;
 }
 
+.circle-label h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.circle-label p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+/* Persentase */
+.progress-85 {
+  stroke-dashoffset: 65.97;
+}
+
+.progress-95 {
+  stroke-dashoffset: 21.99;
+}
+
+
+/* === Bar Skill === */
 .about-skill-bar-container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 20px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .bar-item {
-  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
 .bar-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.5rem;
-  margin-bottom: 8px;
-  display: inline-block;
-  color: #333;
+  font-weight: 600;
+  min-width: 80px;
+  color: #003366;
+}
+
+.bar-label::before {
+  content: "●";
+  color: #003366;
+  font-size: 1.5rem;
+  margin-top: -5px;
 }
 
 .bar-track {
+  flex: 1;
+  height: 30px;
   background-color: #e6e6e6;
-  height: 24px;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  margin-top: 8px;
 }
 
 .bar-fill {
-  background-color: #00264d;
+  background: linear-gradient(90deg, #00264d, #005a8d);
   height: 100%;
-  border-radius: 12px 0 0 12px;
-  transition: width 0.6s ease;
+  width: 75%;
+  border-radius: 10px 0 0 10px;
+  position: relative;
+}
+
+.bar-fill::after {
+  content: "75%";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 0.8rem;
 }
 
 
@@ -214,22 +281,22 @@ circle.progress {
 }
 
 .about-team-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto 50px;
 }
 
 .about-team-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
 .highlight-orange {
-  color: #ff6600;
+  color: #ff5003;
 }
 
 .about-team-paragraph {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #555;
 }
 
@@ -317,3 +384,228 @@ circle.progress {
 
 
 
+
+
+/*Responsive: Tablet (1024px ke bawah)*/
+@media (max-width: 1024px) {
+
+.about-header-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px 50px 0px;
+    background-color: #fff;
+}
+  .about-header-title,
+  .about-skill-title,
+  .about-team-title {
+    font-size: 2.5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about-header-paragraph,
+  .about-skill-paragraph,
+  .about-team-paragraph {
+    font-size: 1.1rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .about-header-container,
+  .about-skill-container,
+  .about-team-container {
+    font-size: 1.1rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  .about-video-section {
+    padding: 0px;
+  }
+  .about-video-container {
+    height: 400px;
+    margin-left: 200px;
+  }
+  .about-video-left{
+    width: 60px;
+    height: 400px;
+    justify-content: right;
+    left: 80px;
+  }
+  .about-video-play {
+    width: 250px;
+    height: 150px;
+    margin-right: 10px;
+  }
+
+.about-skill-circle-container {
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+
+  .about-skill-bar-container {
+    padding: 40px 10px;
+  }
+  .team-card {
+    width: 220px;
+  }
+  .team-card-photo {
+    height: 180px;
+  }
+  .team-card-name{
+    font-size: 1rem;
+  }
+  .team-card-role{
+    font-size: 0.9rem;
+  }
+  .team-card-skill{
+    font-size: 0.7rem;
+  }
+}
+
+/* ========== Responsive: Tablet Kecil / Mobile Landscape (768px ke bawah) ========== */
+@media (max-width: 768px) {
+  .about-header-section,
+  .about-skill-section,
+  .about-team-section {
+    padding: 50px 0px 10px 0px;
+  }
+  .about-header-title,
+  .about-skill-title {
+    font-size: 1.6rem;
+  }
+  .about-header-paragraph,
+  .about-skill-paragraph {
+    font-size: 1rem;
+    width: 600px;
+  }
+  .mockup-container{
+    position: relative;
+    width: 400px;
+    height: 250px;
+    background-color: transparent;
+    margin-right:100px ;
+}
+.panel-small {
+    position: absolute;
+    top: 50%;
+    right: -120px;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 160px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .team-card-name{
+    font-size: 1rem;
+  }
+  .team-card-role{
+    font-size: 0.9rem;
+  }
+  .team-card-skill{
+    font-size: 0.7rem;
+  }
+
+}
+
+
+/* ========== Responsive: Mobile (480px ke bawah) ========== */
+@media (max-width: 480px) {
+  .about-header-section,
+  .about-skill-section,
+  .about-team-section {
+    padding: 10px 0px 10px 0px;
+    width: 480px;
+    margin: 0 auto;
+  }
+  .about-header-title,
+  .about-skill-title,
+  .about-team-title {
+    font-size: 1.6rem;
+  }
+  .about-header-paragraph,
+  .about-skill-paragraph,
+  .about-team-paragraph {
+    font-size: 0.8rem;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+.mockup-section {
+    padding: 10px 20px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  .mockup-container{
+    position: relative;
+    width: 280px;
+    height: 180px;
+    background-color: transparent;
+    margin-right:100px ;
+}
+.panel-small {
+    position: absolute;
+    top: 50%;
+    right: -80px;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 100px;
+    background-color: #d9d9d9;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play-button {
+    width: 60px;
+    height: 60px;
+    background-color: #e53935;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+    .about-skill-circle-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        padding: 30px;
+        margin-bottom: 10px;
+    }
+    .about-skill-bar-container {
+        padding: 40px 50px;
+    }
+.bar-label {
+    font-size: 1rem;
+}
+.bar-track {
+    height: 20px;
+}
+
+.team-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.team-card-name,
+.team-card-role {
+    font-size: 0.9rem;
+}
+.team-card-skill {
+    font-size: 0.6rem;
+    color: #666;
+}
+  }

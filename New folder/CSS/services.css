@@ -685,30 +685,25 @@ text-align: center;
   }
   .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 1rem;
-    padding: 2cap;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 50px;
     margin-top: -50px;
   }
   .testimonial-card {
     padding: 0.7rem 0.2rem;
-    height: 200px;
   }
   .testimonial-avatar {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 120px;
   }
   .testimonial-name {
-    font-size: 0.7rem;
-    margin-top: -5px;
+    font-size: 0.9rem;
   }
   .testimonial-title {
-    font-size: 0.6rem;
-    margin-top: -5px;
+    font-size: 0.8rem;
   }
   .testimonial-quote {
-    font-size: 0.5rem;
-    margin-top: 1px;
+    font-size: 0.7rem;
   }
   .testimonial-stars {
     font-size: 1rem;
@@ -718,6 +713,8 @@ text-align: center;
     margin-top: 1rem;
   }
   .pagination-btn {
-    display: none;
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
   }
 }

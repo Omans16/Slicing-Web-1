@@ -1,59 +1,86 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const testimonials = document.querySelectorAll(".testimonial-card");
-    const grid = document.getElementById("testimonialGrid");
-    const pageNumbersContainer = document.getElementById("pageNumbers");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
 
-    const itemsPerPage = 4;
-    let currentPage = 1;
+  const container = document.querySelector('.card-container');
+  const cards = document.querySelectorAll('.project-card');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  const dotsContainer = document.querySelector('.carousel-dots');
 
-    function renderPage(page) {
-      const start = (page - 1) * itemsPerPage;
-      const end = start + itemsPerPage;
+  let currentIndex = 0;
+  let cardsPerSlide = 1;
+  let totalSlides = 1;
+  let autoSlideInterval;
 
-      testimonials.forEach((card, index) => {
-        card.style.display = index >= start && index < end ? "block" : "none";
+  function calculateLayout() {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 480) {
+      cardsPerSlide = 6;
+    } else if (screenWidth <= 1440) {
+      cardsPerSlide = 4;
+    } else {
+      cardsPerSlide = 4; // default fallback
+    }
+
+    totalSlides = Math.ceil(cards.length / cardsPerSlide);
+    currentIndex = 0;
+    createDots();
+    updateCarousel();
+  }
+
+  function createDots() {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('carousel-dot');
+      if (i === currentIndex) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        updateCarousel();
       });
+      dotsContainer.appendChild(dot);
     }
+  }
 
-    function renderPageNumbers() {
-      pageNumbersContainer.innerHTML = "";
-      const totalPages = Math.ceil(testimonials.length / itemsPerPage);
+  function updateCarousel() {
+    const offset = currentIndex * (container.offsetWidth / cardsPerSlide);
+    container.style.transform = `translateX(-${offset}px)`;
 
-      const min = Math.max(1, currentPage - 1);
-      const max = Math.min(totalPages, currentPage + 1);
+    // Atur dot aktif
+    const dots = document.querySelectorAll('.carousel-dot');
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  }
 
-      for (let i = min; i <= max; i++) {
-        const btn = document.createElement("button");
-        btn.textContent = i;
-        if (i === currentPage) btn.classList.add("active");
-        btn.addEventListener("click", () => {
-          currentPage = i;
-          renderPage(currentPage);
-          renderPageNumbers();
-        });
-        pageNumbersContainer.appendChild(btn);
-      }
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  // Auto-slide only on screen <= 480px
+  function handleAutoSlide() {
+    clearInterval(autoSlideInterval);
+    if (window.innerWidth <= 480) {
+      autoSlideInterval = setInterval(() => {
+        nextSlide();
+      }, 5000);
     }
+  }
 
-    prevBtn.addEventListener("click", () => {
-      if (currentPage > 1) {
-        currentPage--;
-        renderPage(currentPage);
-        renderPageNumbers();
-      }
-    });
-
-    nextBtn.addEventListener("click", () => {
-      const totalPages = Math.ceil(testimonials.length / itemsPerPage);
-      if (currentPage < totalPages) {
-        currentPage++;
-        renderPage(currentPage);
-        renderPageNumbers();
-      }
-    });
-
-    renderPage(currentPage);
-    renderPageNumbers();
+  window.addEventListener('resize', () => {
+    calculateLayout();
+    handleAutoSlide();
   });
+
+  // Init
+  calculateLayout();
+  handleAutoSlide();
+

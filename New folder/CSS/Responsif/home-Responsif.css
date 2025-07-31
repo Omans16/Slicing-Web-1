@@ -1636,9 +1636,13 @@ text-align: center;
   margin-bottom: 15px;
   font-size: 8px;
 }
-.carousel-btn.next,
-.carousel-btn.prev{
-display: none;
+.carousel-btn.next {
+  right: 10px;
+  margin-bottom: 60px;
+}
+.carousel-btn.prev {
+  left: 10px;
+  margin-bottom: 60px;
 }
     /* Partner Section */
 .partner-section h2 {
@@ -1816,7 +1820,6 @@ display: none;
     gap: 1rem;
     margin-top: -15px;
     margin-left: 0px;
-    width: 200px;
 }
 
 }

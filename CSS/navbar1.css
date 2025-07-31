@@ -24,7 +24,7 @@ body {
 
 
 .navbar-container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   display: flex;
@@ -124,6 +124,9 @@ pointer-events: none;
 
 
 @media (max-width: 1024px){
+.navbar-container {
+  width: 90%;
+}
 .nav-menu{
   gap: 5px;
 }
@@ -208,3 +211,78 @@ pointer-events: none;
 }
 }
 
+@media (max-width: 425px) {
+  .navbar {
+    padding: 21px 20px;
+    width: 100%;
+}
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .nav-menu {
+    top: 80px;
+    right: 60px;
+    width: 140px;
+    padding: 8px;
+  }
+
+  .nav-menu a {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 375px) {
+.navbar {
+  padding: 22px 20px;
+  width: 100%;
+}
+  .logo img {
+    width: 100px;
+  }
+
+  .nav-menu {
+    top: 80px;
+    right: 60px;
+    width: 130px;
+    padding: 8px;
+  }
+
+  .nav-menu a {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    padding: 25px 20px;
+    width: 100%;
+  } 
+  .logo img {
+    width: 90px;
+  }
+
+  .nav-menu {
+    top: 80px;
+    right: 60px;
+    width: 120px;
+    padding: 6px;
+  }
+
+  .nav-menu a {
+    font-size: 0.65rem;
+    padding: 6px;
+  }
+
+  .menu-toggle {
+    font-size: 22px;
+  }
+}

@@ -43,7 +43,7 @@
 /* Slide individual */
 .lokasi-slide {
   display: none;
-  flex-direction: row;
+  flex-direction: row; /* Sejajarkan horizontal */
   align-items: stretch;
   background: #ffffff;
   border-radius: 10px;
@@ -89,14 +89,6 @@
   width: 320px;
 }
 
-.button {
-  margin-top: 10px;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    align-items: center;
-}
-
 .lokasi-btn-maps {
   margin-top: 1rem;
   background-color: #ff5e00;
@@ -106,31 +98,12 @@
   text-decoration: none;
   display: inline-block;
   font-weight: bold;
-  width: 160px;
-  text-align: center;
+  width: 100px;
 }
 
 .lokasi-btn-maps:hover {
-  background-color: #e65d0e;
+  background-color: #e04e00;
 }
-
-.lokasi-btn-WhatsApp {
-  margin-top: 1rem;
-  background-color: #25d365;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  width: 160px;
-  text-align: center;
-}
-
-.lokasi-btn-WhatsApp:hover {
-  background-color: #2dbe62;
-}
-
 
 /* Carousel navigation */
 .lokasi-carousel-prev,.lokasi-carousel-next {
@@ -273,7 +246,6 @@
   border: none;
   padding: 12px 30px;
   font-size: 1.5rem;
-  font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 0 #d44b00;
@@ -336,28 +308,6 @@
   right: 20px;
   top: 80%;
 }
-
-.button {
-    margin-top: 10px;
-    display: flex;
-    gap: 20px;
-    width: 350px;
-    justify-content: center;
-    align-items: center;
-}
-
-.lokasi-btn-maps{
-  padding: 10px 20px;
-  width: 150px;
-  font-size: 15px;
-}
-
-.lokasi-btn-WhatsApp {
-  padding: 10px 20px;
-  width: 170px;
-  font-size: 15px;
-}
-
 .lokasi-dot {
   height: 8px;
   width: 8px;
@@ -466,43 +416,6 @@
   right: 8px;
   top: 80%;
 }
-
-.button {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 240px;
-}
-.lokasi-btn-maps {
-  margin-top: 1rem;
-  background-color: #ff5e00;
-  color: white;
-  padding: 9px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  width: 150px;
-  text-align: center;
-  font-size: 15px;
-}
-
-.lokasi-btn-WhatsApp {
-  margin-top: 1rem;
-  background-color: #25d365;
-  color: white;
-  padding: 10px 5px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  width: 220px;
-  text-align: center;
-  font-size: 15px;
-}
-
 .lokasi-dot {
   height: 8px;
   width: 8px;
@@ -613,8 +526,7 @@
   .lokasi-carousel{
     width: 100%;
   }
-
-
+  /* Carousel navigation */
 /* Carousel navigation */
 .lokasi-carousel-prev,.lokasi-carousel-next {
   position: absolute;
@@ -629,66 +541,23 @@
   border-radius: 50%;
   margin-top: -80px;
 }
-.button {
-        margin-top: -10px;
-        display: flex;
-        gap: 0px;
-        justify-content: flex-start;
-        align-items: center;
-        width: 150px;
-        flex-wrap: wrap;
-        flex-direction: row;
-}
 .lokasi-btn-maps {
-  margin-top: 1rem;
-  background-color: #ff5e00;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  width: 150px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.lokasi-btn-WhatsApp {
-  margin-top: 1rem;
-  background-color: #25d365;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  width: 220px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.lokasi-carousel-dots {
-    text-align: center;
-    margin-top: 20px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    width: 70px;
 }
 .lokasi-dot {
   height: 5px;
   width: 5px;
   margin-bottom: 20px;
 }
-
-
-.contact-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
 .form-illustration{
   width: 300px;
-  margin-left:0px;
-  height: 130px;
+  margin-left:40px;
 }
 .contact-form-section{
   padding: 10px 20px;
@@ -697,427 +566,33 @@
 .form-illustration h3 {
     font-size: 1rem;
     margin-bottom: 1rem;
-    width:300px;
-    text-align: center;
+    width:160px;
 }
 .form-illustration p {
     font-size: 0.75rem;
     margin-bottom: 1rem;
     width:auto;
-    text-align: center;
-}
-.form-illustration img {
-  display: none;
 }
 .contact-form {
     background-color: #fff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-    width: 300px;
-    height: 360px;
+    width: 160px;
+    height: 450px;
     padding: 20px;
-    margin-left: 40px;
 }
 .contact-form h3 {
     font-size: 1rem;
     margin-top: -0.6rem;
     margin-bottom: 0.2rem;
     color: #ff5e00;
+    width: 180px;
 }
 .form-grid {
-    display :grid;
-    gap: 10px;
-}
-.contact-form form {
-    width: auto;
-}
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 8px 12px;
-    font-size: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-top: 8px;
-    box-sizing: border-box;
-    resize: none;
-}
-.contact-form button {
-    margin-top: 20px;
-    background-color: #ff5e00;
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    font-size: 0.7rem;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 0 #d44b00;
-    transition: background-color 0.3s;
-}
-}
-
-
-
-
-@media screen and (max-width: 425px){
-.lokasi-section {
-  padding: 20px 30px;
-  background-color: #fff;
-  font-family: sans-serif;
-}
-.lokasi-slide {
-    flex-direction: column;
-}
-  .lokasi-heading{
-    font-size: 1.3rem;
-    margin-top: 1rem;
-  }
-  .lokasi-deskripsi{
-    margin-bottom: 2rem;
-    font-size: 0.8rem;
-  }
-  .lokasi-wrapper{
-    margin-bottom: 0px;
-  }
-  .lokasi-slide img {
-    width: 70%;
-    object-fit: cover;
-    height: auto;
-    display: block;
-    padding: 20px 20px 0px 35px;
-    margin: 0 auto;
-}
-.lokasi-box {
-    width: 80%;
-    padding: 30px 20px 20px 20px;
-    font-size: 1.1rem;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-}
-.lokasi-box h4 {
-    font-size: 0.8rem;
-    text-align: center;
-    margin-top: -20px;
-}
-.lokasi-box p {
-    font-size: 0.7rem;
-    margin-bottom: 10px;
-    color: #555;
-    font-weight: 500;
-    width: auto;
-    text-align: left;
-    justify-content: center;
-    margin-left: 50px;
-}
-  .lokasi-carousel{
-    width: 100%;
-  }
-
-/* Carousel navigation */
-.lokasi-carousel-prev,.lokasi-carousel-next {
-  position: absolute;
-  transform: translateY(-50%);
-  background: #fff;
-  border: none;
-  font-size: 0.8rem;
-  padding: 4px;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 50%;
-  margin-top: -80px;
-}
-    .button {
-        margin-top: -10px;
-        display: flex;
-        gap: 5px;
-        justify-content: space-around;
-        align-items: stretch;
-        width: 252px;
-        flex-wrap: nowrap;
-        flex-direction: row;
-    }
-.lokasi-btn-maps {
-  margin-top: 1rem;
-  background-color: #ff5e00;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  width: 200px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.lokasi-btn-WhatsApp {
-  margin-top: 1rem;
-  background-color: #25d365;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  width: 200px;
-  text-align: center;
-  font-size: 12px;
-}
-.lokasi-dot {
-  height: 5px;
-  width: 5px;
-  margin-bottom: 20px;
-}
-
-
-.contact-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    display :flex;
     flex-wrap: wrap;
-}
-.form-illustration{
-  width: 300px;
-  margin-left:0px;
-  height: 130px;
-}
-.contact-form-section{
-  padding: 10px 20px;
-  margin-top: -20px;
-}
-.form-illustration h3 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    width:300px;
-    text-align: center;
-}
-.form-illustration p {
-    font-size: 0.75rem;
-    margin-bottom: 1rem;
-    width:auto;
-    text-align: center;
-}
-.form-illustration img {
-  display: none;
-}
-.contact-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-    width: 300px;
-    height: 360px;
-    padding: 20px;
-    margin-left: 40px;
-}
-.contact-form h3 {
-    font-size: 1rem;
-    margin-top: -0.6rem;
-    margin-bottom: 0.2rem;
-    color: #ff5e00;
-}
-.form-grid {
-    display :grid;
-    gap: 10px;
-}
-.contact-form form {
-    width: auto;
-}
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 8px 12px;
-    font-size: 0.6rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-top: 8px;
-    box-sizing: border-box;
-    resize: none;
-}
-.contact-form button {
-    margin-top: 20px;
-    background-color: #ff5e00;
-    color: white;
-    border: none;
-    padding: 8px 20px;
-    font-size: 0.7rem;
-    border-radius: 8px;
-    cursor: pointer;
-    box-shadow: 0 4px 0 #d44b00;
-    transition: background-color 0.3s;
-}
-}
-
-
-@media screen and (max-width: 375px){
-.lokasi-section {
-  padding: 20px 30px;
-  background-color: #fff;
-  font-family: sans-serif;
-}
-.lokasi-slide {
-    flex-direction: column;
-}
-  .lokasi-heading{
-    font-size: 1.3rem;
-    margin-top: 1rem;
-  }
-  .lokasi-deskripsi{
-    margin-bottom: 2rem;
-    font-size: 0.8rem;
-  }
-  .lokasi-wrapper{
-    margin-bottom: 0px;
-  }
-  .lokasi-slide img {
-    width: 70%;
-    object-fit: cover;
-    height: auto;
-    display: block;
-    padding: 20px 20px 0px 35px;
-    margin: 0 auto;
-}
-.lokasi-box {
-    width: 80%;
-    padding: 30px 20px 20px 20px;
-    font-size: 1.1rem;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-}
-.lokasi-box h4 {
-    font-size: 0.8rem;
-    text-align: center;
-    margin-top: -20px;
-}
-.lokasi-box p {
-    font-size: 0.7rem;
-    margin-bottom: 10px;
-    color: #555;
-    font-weight: 500;
-    width: auto;
-    text-align: left;
-    justify-content: center;
-    margin-left: 35px;
-}
-  .lokasi-carousel{
-    width: 100%;
-  }
-
-/* Carousel navigation */
-.lokasi-carousel-prev,.lokasi-carousel-next {
-  position: absolute;
-  transform: translateY(-50%);
-  background: #fff;
-  border: none;
-  font-size: 0.8rem;
-  padding: 4px;
-  cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 50%;
-  margin-top: -80px;
-}
-    .button {
-        margin-top: -10px;
-        display: flex;
-        gap: 5px;
-        justify-content: space-around;
-        align-items: stretch;
-        width: auto;
-        flex-wrap: nowrap;
-        flex-direction: row;
-    }
-.lokasi-btn-maps {
-  margin-top: 1rem;
-  background-color: #ff5e00;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  width: 200px;
-  text-align: center;
-  font-size: 12px;
-}
-
-.lokasi-btn-WhatsApp {
-  margin-top: 1rem;
-  background-color: #25d365;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: bold;
-  width: 200px;
-  text-align: center;
-  font-size: 12px;
-}
-.lokasi-dot {
-  height: 5px;
-  width: 5px;
-  margin-bottom: 20px;
-}
-
-
-.contact-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.form-illustration{
-  width: 300px;
-  margin-left:0px;
-  height: 130px;
-}
-.contact-form-section{
-  padding: 10px 20px;
-  margin-top: -20px;
-}
-.form-illustration h3 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    width:300px;
-    text-align: center;
-}
-.form-illustration p {
-    font-size: 0.75rem;
-    margin-bottom: 1rem;
-    width:auto;
-    text-align: center;
-}
-.form-illustration img {
-  display: none;
-}
-.contact-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-    width: 300px;
-    height: 360px;
-    padding: 20px;
-    margin-left: 40px;
-}
-.contact-form h3 {
-    font-size: 1rem;
-    margin-top: -0.6rem;
-    margin-bottom: 0.2rem;
-    color: #ff5e00;
-}
-.form-grid {
-    display :grid;
-    gap: 10px;
+    gap: 1px;
 }
 .contact-form form {
     width: auto;

@@ -62,19 +62,3 @@
       }
     });
   });
-
-
-
-  // Ambil semua elemen bulan (li) di semua tahun
-  const allMonthItems = document.querySelectorAll('.month-list li');
-
-  allMonthItems.forEach(item => {
-    item.addEventListener('click', () => {
-      // Hapus class 'active' dari semua li
-      allMonthItems.forEach(li => li.classList.remove('active'));
-      
-      // Tambahkan class 'active' ke item yang diklik
-      item.classList.add('active');
-    });
-  });
-
